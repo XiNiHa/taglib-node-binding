@@ -3,7 +3,10 @@
     "types": "dist/binding.d.ts",
     "dependencies": {
         "bindings": "~1.5.0",
-        "node-addon-api": "^1.1.0"
+        "cmake-js": "^5.3.2",
+        "cross-spawn": "^7.0.0",
+        "node-addon-api": "^1.1.0",
+        "npm-run-path": "^3.1.0"
     },
     "scripts": {
         "lint": "eslint . --ext .js,.ts",
@@ -11,10 +14,8 @@
         "pretest": "npm run lint && tsc",
         "test": "node ./test/test_binding.js",
         "prepare": "tsc",
-        "build:dev": "node-gyp build --debug",
-        "rebuild:dev": "node-gyp rebuild --debug"
+        "build": "node build.js"
     },
-    "gypfile": true,
     "name": "taglib-node-binding",
     "version": "1.0.0",
     "author": "XiNiHa<anesin1109@naver.com>",
@@ -26,7 +27,6 @@
         "@typescript-eslint/eslint-plugin": "^2.3.0",
         "@typescript-eslint/parser": "^2.3.0",
         "eslint": "^6.4.0",
-        "node-gyp": "^5.0.3",
         "typescript": "3.6.3"
     }
 }

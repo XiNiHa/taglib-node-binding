@@ -3,3 +3,4 @@ dist/*
 
 # Problem with import syntax
 test/*
+build.js
