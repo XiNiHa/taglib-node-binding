@@ -11,10 +11,6 @@ interface TagNative {
 }
 
 export class Tag {
-  constructor(native: TagNative) {
-    this._instance = native;
-  }
-
   get title(): string {
     return this._instance.title;
   }
