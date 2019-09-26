@@ -1,0 +1,7 @@
+node_modules
+test
+.vscode
+.github
+build
+dist
+taglib
