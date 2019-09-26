@@ -22,6 +22,7 @@
     "version": "1.0.0",
     "author": "XiNiHa<anesin1109@naver.com>",
     "license": "ISC",
+    "repository": "https://github.com/XiNiHa/taglib-node-binding",
     "description": "Node.js binding of TagLib",
     "devDependencies": {
         "@types/bindings": "^1.3.0",
