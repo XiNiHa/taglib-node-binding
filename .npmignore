@@ -3,5 +3,5 @@ test
 .vscode
 .github
 build
-dist
 taglib
+lib
