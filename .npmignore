@@ -1,7 +1,7 @@
-node_modules
-test
-.vscode
-.github
-build
-taglib
-lib
+node_modules/
+test/
+.vscode/
+.github/
+build/
+taglib/
+lib/
