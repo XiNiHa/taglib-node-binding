@@ -2,11 +2,10 @@ name: Node.js Package
 
 on:
   release:
-    type: create
+    types: create
 
 jobs:
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
