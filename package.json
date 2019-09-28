@@ -19,7 +19,7 @@
         "rebuild:dev": "cmake-js rebuild --debug"
     },
     "name": "taglib-node-binding",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "XiNiHa<anesin1109@naver.com>",
     "license": "ISC",
     "repository": "https://github.com/XiNiHa/taglib-node-binding",
