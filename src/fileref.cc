@@ -7,6 +7,7 @@
 #include "taglib/xiphcomment.h"
 #include "fileref.h"
 #include "tag.h"
+#include "properties.h"
 
 using namespace Napi;
 
@@ -15,6 +16,7 @@ FunctionReference FileRef::constructor;
 Object FileRef::Init(Napi::Env env, Object exports) {
   auto func = DefineClass(env, "FileRef", {
     InstanceAccessor("tag", &FileRef::GetTag, nullptr),
+    InstanceAccessor("properties", &FileRef::GetProperties, nullptr),
     InstanceAccessor("extension", &FileRef::GetExtension, nullptr),
     InstanceMethod("save", &FileRef::Save)
   });
@@ -92,6 +94,10 @@ Value FileRef::GetTag(const CallbackInfo &info) {
   }
 
   return Tag::New({ External<TagLib::Tag>::New(env, ptr) });
+}
+
+Value FileRef::GetProperties(const CallbackInfo &info) {
+  return Properties::New({ External<TagLib::AudioProperties>::New(info.Env(), f.audioProperties())});
 }
 
 Value FileRef::GetExtension(const CallbackInfo &info) {

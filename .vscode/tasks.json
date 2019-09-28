@@ -6,7 +6,7 @@
     {
       "label": "Build for Debug",
       "type": "shell",
-      "command": "npm run build&& npm run pretest",
+      "command": "npm run rebuild:dev&& npm run pretest",
       "group": "test"
     }
   ]

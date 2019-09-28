@@ -3,12 +3,14 @@
 
 #include "fileref.h"
 #include "tag.h"
+#include "properties.h"
 
 using namespace Napi;
 
 Object Init(Env env, Object exports) {
   FileRef::Init(env, exports);
   Tag::Init(env, exports);
+  Properties::Init(env, exports);
 
   return exports;
 }

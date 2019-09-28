@@ -1,9 +1,11 @@
 import bindings = require("bindings");
 const tnb = bindings("taglib-node-binding-native");
 import { Tag } from "./Tag";
+import { Properties } from "./Properties";
 
 interface FileRefNative {
   readonly tag: Tag;
+  readonly properties: Properties;
   readonly extension: string;
   save(): boolean;
 }
@@ -15,6 +17,10 @@ export class FileRef {
 
   get tag(): Tag {
     return this._instance.tag;
+  }
+
+  get properties(): Properties {
+    return this._instance.properties;
   }
 
   get extension(): string {

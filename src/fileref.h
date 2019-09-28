@@ -16,5 +16,6 @@ private:
   Napi::Value Save(const Napi::CallbackInfo &info);
 
   Napi::Value GetTag(const Napi::CallbackInfo &info);
+  Napi::Value GetProperties(const Napi::CallbackInfo &info);
   Napi::Value GetExtension(const Napi::CallbackInfo &info);
 };

@@ -21,6 +21,9 @@ function testRead() {
   assert.strictEqual(f.tag.genre, getExpected(f.extension, "genre"), "Unexpected value returned");
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 
   console.log("Testing FLAC.flac");
   f = new FileRef(path.join(__dirname, "audio", "FLAC.flac"));
@@ -32,6 +35,9 @@ function testRead() {
   assert.strictEqual(f.tag.genre, getExpected(f.extension, "genre"), "Unexpected value returned");
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
   
   console.log("Testing MP3_ID3v1.mp3");
   f = new FileRef(path.join(__dirname, "audio", "MP3_ID3v1.mp3"));
@@ -44,6 +50,9 @@ function testRead() {
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
   assert.strictEqual(f.tag.type, "ID3v1", "unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 
   console.log("Testing MP3_ID3v2.3.mp3");
   f = new FileRef(path.join(__dirname, "audio", "MP3_ID3v2.3.mp3"));
@@ -56,6 +65,9 @@ function testRead() {
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
   assert.strictEqual(f.tag.type, "ID3v2", "unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 
   console.log("Testing MP3_ID3v2.4.mp3");
   f = new FileRef(path.join(__dirname, "audio", "MP3_ID3v2.4.mp3"));
@@ -68,6 +80,9 @@ function testRead() {
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
   assert.strictEqual(f.tag.type, "ID3v2", "unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 
   console.log("Testing OGG.ogg");
   f = new FileRef(path.join(__dirname, "audio", "OGG.ogg"));
@@ -79,6 +94,9 @@ function testRead() {
   assert.strictEqual(f.tag.genre, getExpected(f.extension, "genre"), "Unexpected value returned");
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 
   console.log("Testing OPUS.opus");
   f = new FileRef(path.join(__dirname, "audio", "OPUS.opus"));
@@ -90,6 +108,9 @@ function testRead() {
   assert.strictEqual(f.tag.genre, getExpected(f.extension, "genre"), "Unexpected value returned");
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 
   console.log("Testing WAV_ID3v2.4.wav");
   f = new FileRef(path.join(__dirname, "audio", "WAV_ID3v2.4.wav"));
@@ -102,6 +123,9 @@ function testRead() {
   assert.strictEqual(f.tag.year, 2000, "Unexpected value returned");
   assert.strictEqual(f.tag.track, 1, "Unexpected value returned");
   assert.strictEqual(f.tag.type, "ID3v2", "Unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 
   console.log("Testing ID3v2.4_Unicode.mp3");
   f = new FileRef(path.join(__dirname, "audio", "ID3v2.4_Unicode.mp3"));
@@ -110,6 +134,9 @@ function testRead() {
   assert.strictEqual(f.tag.artist, "유니코드 아티스트(Unicode Artist)", "Unexpected value returned");
   assert.strictEqual(f.tag.comment, "유니코드 설명(Unicode Comment)", "Unexpected value returned");
   assert.strictEqual(f.tag.genre, "유니코드 장르(Unicode Genre)", "Unexpected value returned");
+  assert.strictEqual(f.properties.length, 8, "Unexpected value returned");
+  assert.strictEqual(f.properties.sampleRate, 48000, "Unexpected value returned");
+  assert.strictEqual(f.properties.channels, 2, "Unexpected value returned");
 }
 
 testRead();

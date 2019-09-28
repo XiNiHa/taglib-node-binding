@@ -45,7 +45,7 @@ Tag::Tag(const CallbackInfo &info) : ObjectWrap(info) {
   }
 
   if (!info[0].IsExternal()) {
-    TypeError::New(env, "Argument 1 should be a native Tag object. Calling this construconstructor on JS is not recommended.").ThrowAsJavaScriptException();
+    TypeError::New(env, "Argument 1 should be a native Tag object. Calling this constructor on JS is not recommended.").ThrowAsJavaScriptException();
     return;
   }
 

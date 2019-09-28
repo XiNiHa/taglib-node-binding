@@ -10,8 +10,7 @@
       "name": "Debug",
       "preLaunchTask": "Build for Debug",
       "program": "node",
-      "args": ["${workspaceFolder}/test/test_binding.js"],
-      "cwd": "${workspaceFolder}"
+      "args": ["${workspaceFolder}/test/test_binding.js"]
     }
   ]
 }
